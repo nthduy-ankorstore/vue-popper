@@ -1,86 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>VueJS popper component</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../dist/css/vue-popper.css">
-</head>
-<body>
-
-<style>
-  .nav {
-    background: #00d1b2;
-  }
-
-  #app {
-    padding: 15px 25px;
-  }
-
-  code {
-    overflow: auto;
-  }
-
-  .popper {
-    padding: 5px;
-  }
-
-  .popper-content {
-    line-height: 80px;
-    margin: 20px;
-  }
-
-  .columns.box {
-    margin: 20px 0;
-    padding: 0;
-  }
-</style>
-
-<nav class="nav is-warning">
-  <div class="nav-left">
-    <a class="nav-item nav-title">
-      VueJS popper component
-    </a>
-  </div>
-
-  <span class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-
-  <div class="nav-right nav-menu">
-    <div class="nav-item">
-      <div class="field is-grouped">
-        <p class="control">
-          <a class="button is-primary" href="https://github.com/RobinCK/vue-popper/archive/master.zip">
-            <span class="icon">
-              <i class="fa fa-download"></i>
-            </span>
-            <span>Download</span>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button" href="https://github.com/RobinCK/vue-popper">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-            <span>GitHub</span>
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<div id="app">
+<template>
   <div class="columns box">
     <div class="column is-8">
-      <pre class="rich-diff-level-zero"><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
+      <pre
+        class="rich-diff-level-zero"
+      ><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
         class="pl-e rich-diff-level-one">trigger</span>=<span class="pl-s rich-diff-level-one"><span
         class="pl-pds">"</span>hover<span class="pl-pds">"</span></span> :<span
         class="pl-e rich-diff-level-one">options</span>=<span class="pl-s rich-diff-level-one"><span
@@ -113,25 +36,30 @@
 &lt;/<span class="pl-ent rich-diff-level-one">popper</span>&gt;</code></pre>
     </div>
     <div class="column">
-      <popper trigger="hover" :options="{placement: 'left'}">
+      <popper trigger="clickToToggle" :options="{ placement: 'left' }">
         <div class="popper">
           <div>
             <b>Title</b>
           </div>
-          <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100" alt="" align="left">
+          <img
+            src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100"
+            alt=""
+            align="left"
+          />
           <span class="popper-content">Popper Content</span>
         </div>
-
-        <a class="button is-primary" slot="reference">
-          Left
-        </a>
+        <template #reference>
+            <button class="button is-primary" > Left </button>
+        </template>
       </popper>
     </div>
   </div>
 
   <div class="columns box">
     <div class="column is-8">
-      <pre class="rich-diff-level-zero"><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
+      <pre
+        class="rich-diff-level-zero"
+      ><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
         class="pl-e rich-diff-level-one">trigger</span>=<span class="pl-s rich-diff-level-one"><span
         class="pl-pds">"</span>hover<span class="pl-pds">"</span></span> :<span
         class="pl-e rich-diff-level-one">options</span>=<span class="pl-s rich-diff-level-one"><span
@@ -164,25 +92,29 @@
 &lt;/<span class="pl-ent rich-diff-level-one">popper</span>&gt;</code></pre>
     </div>
     <div class="column">
-      <popper trigger="hover" :options="{placement: 'right'}">
+      <popper trigger="hover" :options="{ placement: 'right' }">
         <div class="popper">
           <div>
             <b>Title</b>
           </div>
-          <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100" alt="" align="left">
+          <img
+            src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100"
+            alt=""
+            align="left"
+          />
           <span class="popper-content">Popper Content</span>
         </div>
 
-        <a class="button is-primary" slot="reference">
-          Right
-        </a>
+        <a class="button is-primary" slot="reference"> Right </a>
       </popper>
     </div>
   </div>
 
   <div class="columns box">
     <div class="column is-8">
-      <pre class="rich-diff-level-zero"><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
+      <pre
+        class="rich-diff-level-zero"
+      ><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
         class="pl-e rich-diff-level-one">trigger</span>=<span class="pl-s rich-diff-level-one"><span
         class="pl-pds">"</span>hover<span class="pl-pds">"</span></span> :<span
         class="pl-e rich-diff-level-one">options</span>=<span class="pl-s rich-diff-level-one"><span
@@ -215,25 +147,29 @@
 &lt;/<span class="pl-ent rich-diff-level-one">popper</span>&gt;</code></pre>
     </div>
     <div class="column">
-      <popper trigger="hover" :options="{placement: 'top'}">
+      <popper trigger="hover" :options="{ placement: 'top' }">
         <div class="popper">
           <div>
             <b>Title</b>
           </div>
-          <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100" alt="" align="left">
+          <img
+            src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100"
+            alt=""
+            align="left"
+          />
           <span class="popper-content">Popper Content</span>
         </div>
 
-        <a class="button is-primary" slot="reference">
-          Top
-        </a>
+        <a class="button is-primary" slot="reference"> Top </a>
       </popper>
     </div>
   </div>
 
   <div class="columns box">
     <div class="column is-8">
-      <pre class="rich-diff-level-zero"><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
+      <pre
+        class="rich-diff-level-zero"
+      ><code class="language-html" data-lang="html">&lt;<span class="pl-ent rich-diff-level-one">popper</span> <span
         class="pl-e rich-diff-level-one">trigger</span>=<span class="pl-s rich-diff-level-one"><span
         class="pl-pds">"</span>hover<span class="pl-pds">"</span></span> :<span
         class="pl-e rich-diff-level-one">options</span>=<span class="pl-s rich-diff-level-one"><span
@@ -266,34 +202,31 @@
 &lt;/<span class="pl-ent rich-diff-level-one">popper</span>&gt;</code></pre>
     </div>
     <div class="column">
-      <popper trigger="hover" :options="{placement: 'bottom'}">
+      <popper trigger="hover" :options="{ placement: 'bottom' }">
         <div class="popper">
           <div>
             <b>Title</b>
           </div>
-          <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100" alt="" align="left">
+          <img
+            src="https://placeholdit.imgix.net/~text?txtsize=20&txt=100%C3%97100&w=100&h=100"
+            alt=""
+            align="left"
+          />
           <span class="popper-content">Popper Content</span>
         </div>
 
-        <a class="button is-primary" slot="reference">
-          Bottom
-        </a>
+        <a class="button is-primary" slot="reference"> Bottom </a>
       </popper>
     </div>
   </div>
-</div>
+</template>
+<script>
+import { defineComponent } from "vue";
+import VuePopper from "../src/index";
 
-<script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.js"></script>
-<script type="text/javascript" src="../dist/js/vue-popper.js"></script>
-<script type="text/javascript">
-  new Vue({
-    el: '#app',
-    components: {
-      'popper': VuePopper
-    }
-  });
+export default defineComponent({
+  components: {
+    popper: VuePopper,
+  },
+});
 </script>
-
-</body>
-</html>
