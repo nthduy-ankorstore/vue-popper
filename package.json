@@ -1,6 +1,6 @@
 {
   "name": "@ankorstore/vue-popperjs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "type": "module",
   "description": "VueJS popover",
   "main": "dist/vue-popper.js",
